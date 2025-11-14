@@ -16,6 +16,7 @@ namespace Timer {
             void await_resume();
             bool is_expired();
             void resume();
+            ~AwaitableTimer();
         private:
             std::chrono::time_point<std::chrono::steady_clock> _timepoint;
             std::coroutine_handle<> _coroutine;

@@ -29,4 +29,8 @@ namespace Timer {
         std::cout << "AwaitableTimer::resume" << std::endl;
         _coroutine.resume();
     }
+
+    AwaitableTimer::~AwaitableTimer() {
+        std::cout << "AwaitableTimer dtor" << std::endl;
+    }
 }
